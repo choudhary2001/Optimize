@@ -28,7 +28,7 @@ const Dashboard = () => {
     try {
       const authToken = JSON.parse(localStorage.getItem("authUser")).token;
       // Fetch data from your API
-      const response = await fetch('http://15.207.112.169:3003/api/user/profile', {
+      const response = await fetch('http://localhost:3003/api/user/profile', {
         headers: {
           "Content-Type": "application/json",
           'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -77,7 +77,7 @@ const Dashboard = () => {
   const fetchMachines = async () => {
     try {
       // Fetch data from your API
-      const response = await fetch('http://15.207.112.169:3003/api/user/machine/name', {
+      const response = await fetch('http://localhost:3003/api/user/machine/name', {
         headers: {
           "Content-Type": "application/json",
           'Authorization': `Bearer ${authToken}`
@@ -108,7 +108,7 @@ const Dashboard = () => {
   const fetchMachineData = async () => {
     try {
       // Fetch data from your API
-      const response = await fetch('http://15.207.112.169:3003/api/machine/data', {
+      const response = await fetch('http://localhost:3003/api/machine/data', {
         headers: {
           "Content-Type": "application/json",
           'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -167,7 +167,7 @@ const Dashboard = () => {
     const selectedMachineId = event.target.value;
 
     try {
-      const response = await fetch('http://15.207.112.169:3003/api/user/machine/update', {
+      const response = await fetch('http://localhost:3003/api/user/machine/update', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -207,7 +207,7 @@ const Dashboard = () => {
   const fetchMachineDatamap = async () => {
     try {
       // Fetch data from your API
-      const response = await fetch('http://15.207.112.169:3003/api/machine/chart', {
+      const response = await fetch('http://localhost:3003/api/machine/chart', {
         headers: {
           "Content-Type": "application/json",
           'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -280,7 +280,7 @@ const Dashboard = () => {
   //   setIsDownloading(true);
 
   //   try {
-  //     await downloadFile('http://15.207.112.169:3003/api/data/performance/download', 'report.xlsx');
+  //     await downloadFile('http://localhost:3003/api/data/performance/download', 'report.xlsx');
   //   } catch (error) {
   //     // Handle errors appropriately
   //   } finally {

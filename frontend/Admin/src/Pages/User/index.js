@@ -33,7 +33,7 @@ const ListTables = () => {
     const fetchCompany = async () => {
         try {
             // Fetch data from your API
-            const response = await fetch('http://15.207.112.169:3003/api/all/company', {
+            const response = await fetch('http://localhost:3003/api/all/company', {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -66,7 +66,7 @@ const ListTables = () => {
     const fetchMachine = async (e) => {
         try {
             // Fetch data from your API
-            const response = await fetch(`http://15.207.112.169:3003/api/all/machine/${e}`, {
+            const response = await fetch(`http://localhost:3003/api/all/machine/${e}`, {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -170,7 +170,7 @@ const ListTables = () => {
         e.preventDefault();
 
         try {
-            const apiUrl = editedUser ? `http://15.207.112.169:3003/api/update/user/${editedUser._id}` : 'http://15.207.112.169:3003/create/user';
+            const apiUrl = editedUser ? `http://localhost:3003/api/update/user/${editedUser._id}` : 'http://localhost:3003/create/user';
 
             const response = await fetch(apiUrl, {
                 method: editedUser ? 'PATCH' : 'POST',
@@ -213,7 +213,7 @@ const ListTables = () => {
     const fetchUser = async () => {
         try {
             // Fetch data from your API
-            const response = await fetch('http://15.207.112.169:3003/api/all/users', {
+            const response = await fetch('http://localhost:3003/api/all/users', {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -245,7 +245,7 @@ const ListTables = () => {
     const handleDeleteUser = async (userId) => {
         try {
             // Make API request to delete the user
-            const response = await fetch(`http://15.207.112.169:3003/api/delete/user/${userId}`, {
+            const response = await fetch(`http://localhost:3003/api/delete/user/${userId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${authToken}`, // Replace with your actual token
@@ -286,7 +286,7 @@ const ListTables = () => {
     const handleSaveChanges = async (userId, field, value) => {
         try {
             // Update user on the server
-            const response = await fetch(`http://15.207.112.169:3003/api/update/user/${userId}`, {
+            const response = await fetch(`http://localhost:3003/api/update/user/${userId}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
