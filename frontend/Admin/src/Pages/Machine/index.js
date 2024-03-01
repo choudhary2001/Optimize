@@ -53,7 +53,7 @@ const ListTables = () => {
     const fetchCompany = async () => {
         try {
             // Fetch data from your API
-            const response = await fetch('http://localhost:3003/api/all/company', {
+            const response = await fetch('http://15.207.112.169:3003/api/all/company', {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -162,7 +162,7 @@ const ListTables = () => {
         e.preventDefault();
 
         try {
-            const apiUrl = editedMachine ? `http://localhost:3003/api/update/machine/${editedMachine._id}` : 'http://localhost:3003/create/machine';
+            const apiUrl = editedMachine ? `http://15.207.112.169:3003/api/update/machine/${editedMachine._id}` : 'http://15.207.112.169:3003/create/machine';
 
             const formDataObject = new FormData();
             formDataObject.append('company_name', formData.company_name);
@@ -216,7 +216,7 @@ const ListTables = () => {
     const fetchMachine = async () => {
         try {
             // Fetch data from your API
-            const response = await fetch('http://localhost:3003/api/all/machine', {
+            const response = await fetch('http://15.207.112.169:3003/api/all/machine', {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -246,7 +246,7 @@ const ListTables = () => {
     const handleDeleteMchine = async (userId) => {
         try {
             // Make API request to delete the user
-            const response = await fetch(`http://localhost:3003/api/delete/machine/${userId}`, {
+            const response = await fetch(`http://15.207.112.169:3003/api/delete/machine/${userId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${authToken}`, // Replace with your actual token
@@ -286,7 +286,7 @@ const ListTables = () => {
     const handleSaveChanges = async (userId, field, value) => {
         try {
             // Update user on the server
-            const response = await fetch(`http://localhost:3003/api/update/machine/${userId}`, {
+            const response = await fetch(`http://15.207.112.169:3003/api/update/machine/${userId}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -381,7 +381,7 @@ const ListTables = () => {
                                                             <td>
                                                                 {machine.logo && (
                                                                     <>
-                                                                        <td className="logo"><img src={`http://localhost:3003/images/${machine.logo}`} height="48" /></td>
+                                                                        <td className="logo"><img src={`http://15.207.112.169:3003/images/${machine.logo}`} height="48" /></td>
                                                                         {/* <img src={`data:image/jpeg;base64,${machine.logo.toString('base64')}`} alt={machine.machine_name} /> */}
                                                                     </>
                                                                 )}

@@ -62,7 +62,7 @@ const Header = (props) => {
   const fetchMachines = async () => {
     try {
       // Fetch data from your API
-      const response = await fetch('http://localhost:3003/api/user/machine/name', {
+      const response = await fetch('http://15.207.112.169:3003/api/user/machine/name', {
         headers: {
           "Content-Type": "application/json",
           'Authorization': `Bearer ${authToken}`
@@ -93,7 +93,7 @@ const Header = (props) => {
     try {
       const authToken = JSON.parse(localStorage.getItem("authUser")).token;
       // Fetch data from your API
-      const response = await fetch('http://localhost:3003/api/user/profile', {
+      const response = await fetch('http://15.207.112.169:3003/api/user/profile', {
         headers: {
           "Content-Type": "application/json",
           'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -128,7 +128,7 @@ const Header = (props) => {
     const selectedMachineId = event.target.value;
 
     try {
-      const response = await fetch('http://localhost:3003/api/user/machine/update', {
+      const response = await fetch('http://15.207.112.169:3003/api/user/machine/update', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

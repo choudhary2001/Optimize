@@ -19,7 +19,7 @@ const MainPage = () => {
         try {
             const authToken = JSON.parse(localStorage.getItem("authUser")).token;
             // Fetch data from your API
-            const response = await fetch('http://localhost:3003/api/user/profile', {
+            const response = await fetch('http://15.207.112.169:3003/api/user/profile', {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -68,7 +68,7 @@ const MainPage = () => {
     const fetchMachines = async () => {
         try {
             // Fetch data from your API
-            const response = await fetch('http://localhost:3003/api/user/machine/name', {
+            const response = await fetch('http://15.207.112.169:3003/api/user/machine/name', {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}`
@@ -98,7 +98,7 @@ const MainPage = () => {
     const fetchMachineData = async () => {
         try {
             // Fetch data from your API
-            const response = await fetch('http://localhost:3003/api/machine/data', {
+            const response = await fetch('http://15.207.112.169:3003/api/machine/data', {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -157,7 +157,7 @@ const MainPage = () => {
 
 
         try {
-            const response = await fetch('http://localhost:3003/api/user/machine/update', {
+            const response = await fetch('http://15.207.112.169:3003/api/user/machine/update', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -199,7 +199,7 @@ const MainPage = () => {
     const fetchMachineDatamap = async () => {
         try {
             // Fetch data from your API
-            const response = await fetch('http://localhost:3003/api/machine/chart', {
+            const response = await fetch('http://15.207.112.169:3003/api/machine/chart', {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -272,7 +272,7 @@ const MainPage = () => {
     //   setIsDownloading(true);
 
     //   try {
-    //     await downloadFile('http://localhost:3003/api/data/performance/download', 'report.xlsx');
+    //     await downloadFile('http://15.207.112.169:3003/api/data/performance/download', 'report.xlsx');
     //   } catch (error) {
     //     // Handle errors appropriately
     //   } finally {
@@ -309,7 +309,7 @@ const MainPage = () => {
                                                             <div className="">
                                                                 {machines[machineName].machine_file && (
                                                                     <>
-                                                                        <img src={`http://localhost:3003/images/${machines[machineName].machine_file}`} height="48" width="45" style={{ borderRadius: "25px" }} />
+                                                                        <img src={`http://15.207.112.169:3003/images/${machines[machineName].machine_file}`} height="48" width="45" style={{ borderRadius: "25px" }} />
                                                                         {/* <img src={`data:image/jpeg;base64,${machine.logo.toString('base64')}`} alt={machine.machine_name} /> */}
                                                                     </>
                                                                 )}
