@@ -45,7 +45,7 @@ const ProfileMenu = props => {
     try {
       const authToken = JSON.parse(localStorage.getItem("authUser")).token;
       // Fetch data from your API
-      const response = await fetch('http://13.235.76.12:3003/api/user/profile', {
+      const response = await fetch('http://15.207.112.169:3003/api/user/profile', {
         headers: {
           "Content-Type": "application/json",
           'Authorization': `Bearer ${authToken}` // Replace with your actual token

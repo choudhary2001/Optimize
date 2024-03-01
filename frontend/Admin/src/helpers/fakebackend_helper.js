@@ -79,7 +79,7 @@ const postJwtRegister = (url, data) => {
 // Login Method
 const postJwtLogin = data => {
   console.log(data)
-  let r_data = api.create('http://13.235.76.12:3003/login', data);
+  let r_data = api.create('http://15.207.112.169:3003/login', data);
   console.log(r_data)
   return r_data
 };

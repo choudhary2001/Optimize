@@ -18,7 +18,7 @@ const fireBaseBackend = getFirebaseBackend()
 function* registerUser({ payload: { user } }) {
   try {
     console.log(user)
-    const response = yield call(postJwtRegister, "http://13.235.76.12:3003/create/user", user)
+    const response = yield call(postJwtRegister, "http://15.207.112.169:3003/create/user", user)
     yield put(registerUserSuccessful(response))
 
   } catch (error) {

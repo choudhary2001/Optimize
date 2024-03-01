@@ -51,7 +51,7 @@ const Performance = () => {
         try {
             const authToken = JSON.parse(localStorage.getItem("authUser")).token;
             // Fetch data from your API
-            const response = await fetch('http://13.235.76.12:3003/api/user/profile', {
+            const response = await fetch('http://15.207.112.169:3003/api/user/profile', {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -118,7 +118,7 @@ const Performance = () => {
     const downloadExcel = async () => {
         try {
             // Fetch the data from your API
-            const response = await fetch('http://13.235.76.12:3003/api/data/performance', {
+            const response = await fetch('http://15.207.112.169:3003/api/data/performance', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -152,7 +152,7 @@ const Performance = () => {
     const fetchMachines = async () => {
         try {
             // Fetch data from your API
-            const response = await fetch('http://13.235.76.12:3003/api/user/machine/name', {
+            const response = await fetch('http://15.207.112.169:3003/api/user/machine/name', {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}`
@@ -182,7 +182,7 @@ const Performance = () => {
     const fetchMachineData = async () => {
         try {
             // Fetch data from your API
-            const response = await fetch('http://13.235.76.12:3003/api/data/performance', {
+            const response = await fetch('http://15.207.112.169:3003/api/data/performance', {
                 headers: {
                     "Content-Type": "application/json",
                     'Authorization': `Bearer ${authToken}` // Replace with your actual token
@@ -273,7 +273,7 @@ const Performance = () => {
         const selectedMachineId = event.target.value;
 
         try {
-            const response = await fetch('http://13.235.76.12:3003/api/user/machine/update', {
+            const response = await fetch('http://15.207.112.169:3003/api/user/machine/update', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -305,7 +305,7 @@ const Performance = () => {
     //     setIsDownloading(true);
 
     //     try {
-    //         await downloadFile('http://13.235.76.12:3003/api/data/performance/download', 'report.xlsx');
+    //         await downloadFile('http://15.207.112.169:3003/api/data/performance/download', 'report.xlsx');
     //     } catch (error) {
     //         // Handle errors appropriately
     //     } finally {
